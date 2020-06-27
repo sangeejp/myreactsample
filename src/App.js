@@ -74,10 +74,15 @@ class App extends Component {
         return_percent:0.00
        },
   
-    ]
+    ],
+    total_mf:0,
+    total_ef:0
   };
+  // this.state.total_mf=this.state.chartes[0].portfolio_percent+this.state.chartes[1].portfolio_percent+this.state.chartes[2].portfolio_percent;
+  // this.state.total_ef=this.state.chartes[4].portfolio_percent+this.state.chartes[5].portfolio_percent+this.state.chartes[6].portfolio_percent;
   }
   render() {
+    
     return (
  
     <Container fluid className="App">
@@ -188,16 +193,16 @@ class App extends Component {
       
             </Col>
             <Col md="3" className="content-wrapper">
-              <div className="paddingtop0 bolder">Portfolio
+              <div className="paddingtop0 bolder">Portfolio 
               <span className="pull-right"><select className="myselect"><option value="asset wise">Asset Wise</option></select></span>
               </div>
               <PieChart
              style={{ height: '100px' }}
              lineWidth={40} rounded 
   data={[
-    { title: 'One', value: 10, color: '#E38627' },
-    { title: 'Two', value: 15, color: '#C13C37' },
-    { title: 'Three', value: 20, color: '#6A2135' },
+    { title: 'One', value:  (this.state.chartes[0].portfolio_percent+this.state.chartes[1].portfolio_percent+this.state.chartes[2].portfolio_percent), color: '#E38627' },
+    { title: 'Two', value:(this.state.chartes[3].portfolio_percent+this.state.chartes[4].portfolio_percent+this.state.chartes[5].portfolio_percent), color: '#C13C37' },
+   
   ]}
 /></Col>
             </Row> )
