@@ -1,13 +1,8 @@
 import React, { Component} from 'react';
 import {   Row, Col, Button } from 'react-bootstrap';
-class Block5 extends Component {
-   
-    render() {
-      
-      return (
-   
-      
-        <Col md="2" className="infobox2 text-center">
+
+const Block5=(props)=>(
+<Col md="2" className="infobox2 text-center">
         <Row className="ash2 ">
           
         <Col md="12" className=""> 
@@ -21,12 +16,7 @@ class Block5 extends Component {
            </Row>
            
         </Col>
-        
-      
-              
-     
-    );
-  }
-  }
+);
+
   
   export default Block5;

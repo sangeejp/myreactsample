@@ -105,7 +105,8 @@ store.subscribe(() => {
 // store.dispatch(myDefaultState());
 ReactDOM.render(
   <React.StrictMode>
-    <App chartes={state.chartes}/>
+    {/* <App chartes={state.chartes}/> */}
+    <App store={store}  /> 
   </React.StrictMode>,
   document.getElementById('root')
 );

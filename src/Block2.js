@@ -1,13 +1,7 @@
 import React, { Component} from 'react';
 import {   Row, Col} from 'react-bootstrap';
-class Block2 extends Component {
-   
-    render() {
-      
-      return (
-   
-      
-        <Col md="2" className="infobox">
+const Block2 =(props)=>(
+  <Col md="2" className="infobox">
         <Row className="ash2">
            <Col md="1" className="paddright0" ><i className="fa fa-database"></i></Col>
            <Col md="6"  className="paddright0">
@@ -15,7 +9,7 @@ class Block2 extends Component {
       
            </Col>
            <Col md="2" className="paddright0">
-  <div className="black ">{this.props.charts.quantity}</div>
+  <div className="black ">{props.charts.quantity}</div>
            
            </Col>
            </Row>
@@ -26,7 +20,7 @@ class Block2 extends Component {
       
            </Col>
            <Col md="2" >
-  <div className="black ">${this.props.charts.avg_cost}</div>
+  <div className="black ">${props.charts.avg_cost}</div>
            
            </Col>
            </Row>
@@ -37,17 +31,12 @@ class Block2 extends Component {
       
            </Col>
            <Col md="2" >
-  <div className="black ">${this.props.charts.avg_cost}</div>
+  <div className="black ">${props.charts.avg_cost}</div>
            
            </Col>
            </Row>
         </Col>
+);
 
-               
-              
-     
-    );
-  }
-  }
   
   export default Block2;
